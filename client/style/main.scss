@@ -6,3 +6,102 @@ body {
 p {
   color: white;
 }
+
+#sphere {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 3em auto;
+  background: url('https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZI/AAAAAAAAKao/FnKsv7402_c/s0/earthmap.jpg') 0 0 repeat;
+  /*background: #00ff00;*/
+  border: 0.2em inset red;
+  border-radius: 50%;
+  background-size: 630px;
+  animation: rotate 4s linear infinite;
+  transition: transform 200ms linear;
+  transform-style: preserve-3d;
+  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+  color: #000;
+}
+
+#sphere:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+}
+
+#sphere:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background: radial-gradient(circle at 100px 100px, #fff, #000);
+}
+
+@keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 630px 0;}
+}
+
+/** **/
+@keyframes roundandround {
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.scene {
+  width:600px;
+  height:600px;
+  margin:2% auto;
+  perspective: 1000px;
+}
+.wrapper {
+  width:100%;
+  height:100%;
+
+  transform-style: preserve-3d;
+}
+
+.ball {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin:0 auto;
+
+  animation: roundandround 7.5s 1.3s infinite linear;
+}
+
+.ball .ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border:6px;
+  border-style: dashed;
+  border-radius: 50%;
+  opacity: 0;
+  animation: show 0.75s forwards ease-in-out;
+}
+.ring:nth-child(1) {
+  color:#8df435;
+  transform: rotateY(4deg);
+  animation-delay: 0s;
+}

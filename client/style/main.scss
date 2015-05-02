@@ -1,107 +1,167 @@
-/* CSS declarations go here */
-body {
-  background: #000;
-}
+//colors
+$black_100: rgba(0,0,0,1);
+$color_lima_90_approx: rgba(100,200,0,.9);
+$black_70: rgba(0,0,0,.7);
+$black: #000000;
+$mine_shaft_40: rgba(50, 50, 50, 0.4);
+$color_green_yellow_approx: #8df435;
+$color_pastel_green_approx: rgba(100,222,100,1);
+$color_green_approx: #00de00;
+$color_amulet_approx: #705;
+$color_spring_rain_approx: #af6;
 
-p {
-  color: white;
+//urls
+$url_0: url(http://phosproject.com/wp-content/themes/phos_theme/images/7.jpg);
+
+@keyframes roundandround {
+  to {
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+body {
+  margin: -0.2em;
+  background-color: $black;
+  background: $url_0;
+}
+#body {
+  border: 1px solid rgba(0,0,0, 0);
+  //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: inset 0 0 20px 20px $mine_shaft_40;
 }
 
 #sphere {
   position: relative;
   width: 300px;
   height: 300px;
-  margin: 3em auto;
-  background: url('https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZI/AAAAAAAAKao/FnKsv7402_c/s0/earthmap.jpg') 0 0 repeat;
-  /*background: #00ff00;*/
-  border: 0.2em inset red;
+  margin: 2em auto;
+  background: $color_green_approx;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
   border-radius: 50%;
-  background-size: 630px;
-  animation: rotate 4s linear infinite;
-  transition: transform 200ms linear;
-  transform-style: preserve-3d;
-  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
-  color: #000;
-}
+  animation: rotate 5s linear infinite;
+  //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: height 1.5s, width 1s;
+  //Instead of the line below you could use @includetransition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: ease-in-out;
 
-#sphere:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+  &:hover {
+    width: 600px;
+    height: 600px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.425;
+    background: radial-gradient(circle at 100px 100px, $color_amulet_approx, $color_spring_rain_approx);
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: -5px 5px 150px 20px $color_lima_90_approx;
+    animation: pulsate 2s ease-in-out 1s infinite alternate;
+  }
 }
+@keyframes pulsate {
+  0% {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 0 $black_100;
+  }
+  100% {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: -5px 5px 150px 20px $color_lima_90_approx;
+  }
+}
+@keyframes shake {
+  0% {
 
-#sphere:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.2;
-  background: radial-gradient(circle at 100px 100px, #fff, #000);
+  }
+  100% {
+
+  }
 }
 
 @keyframes rotate {
-  0% {background-position: 0 0;}
-  100% {background-position: 630px 0;}
-}
-
-/** **/
-@keyframes roundandround {
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
+  0% {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 150px 10px 200px 30px $black_70 inset;
+  }
+  100% {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: -150px 10px 200px 30px $black_70 inset;
   }
 }
-
-@keyframes show {
-  to {
-    opacity: 1;
-  }
-}
-
-
-.scene {
-  width:600px;
-  height:600px;
-  margin:2% auto;
-  perspective: 1000px;
-}
-.wrapper {
-  width:100%;
-  height:100%;
-
-  transform-style: preserve-3d;
-}
-
-.ball {
-  position: relative;
-  width: 70%;
-  height: 70%;
-  margin:0 auto;
-
-  animation: roundandround 7.5s 1.3s infinite linear;
-}
-
-.ball .ring {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border:6px;
-  border-style: dashed;
+#s {
+  width: 500px;
+  height: 500px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
   border-radius: 50%;
-  opacity: 0;
-  animation: show 0.75s forwards ease-in-out;
+  animation: pulsate 2s ease-in-out 1s infinite alternate;
 }
-.ring:nth-child(1) {
-  color:#8df435;
-  transform: rotateY(4deg);
-  animation-delay: 0s;
+
+
+.shake {
+  display: inline-block;
+  transform-origin: center center;
+  animation: shake-little 2s infinite;
+}
+
+@-webkit-keyframes shake-little {
+  0% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+  2% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  4% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  6% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  8% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  10% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  12% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  14% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  16% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  18% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  20% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  22% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  24% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  26% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  28% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  30% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  32% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  34% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  36% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  38% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  40% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  42% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  44% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  46% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  48% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  50% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  52% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  54% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  56% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  58% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  60% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  62% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  64% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  66% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  68% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  70% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  72% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  74% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  76% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  78% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  80% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  82% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  84% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  86% { -webkit-transform: translate(0px, 0px) rotate(-0.5deg); }
+  88% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  90% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  92% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
+  94% { -webkit-transform: translate(0px, -1px) rotate(-0.5deg); }
+  96% { -webkit-transform: translate(-1px, 0px) rotate(-0.5deg); }
+  98% { -webkit-transform: translate(-1px, -1px) rotate(-0.5deg); }
 }

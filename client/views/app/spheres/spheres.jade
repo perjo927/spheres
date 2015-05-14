@@ -1,12 +1,9 @@
 template(name="spheres")
     with content
-        h1(class="white-text")
-            | bar
-            | #{foo.bar}
-            | #{bar}
+        a(class="white-text" href="/bars") Bars
 
-        #body
-           #sphere
-           #s
-           .shake
-               #sphere
+        #sphere
+        .row
+            .shake
+                #sphere(class="white")
+                #sphere(class="blue")

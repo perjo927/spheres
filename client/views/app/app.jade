@@ -1,4 +1,8 @@
 //
 template(name="app")
-    each content
-        +yield this
+    header
+        +yield "navbar"
+    main
+        +yield
+    footer
+        +yield "footer"

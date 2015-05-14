@@ -17,7 +17,7 @@ Meteor.startup(function () {
             "password": admin["password"]
         });
     } catch (err) {
-        console.log(err);
+        //console.log(err);
     }
 
     var isDev = (process.env["NODE_ENV"] === "development");

@@ -26,33 +26,85 @@
 Router.route('/', {
         name: "home",
         loadingTemplate: "loading",
-        layoutTemplate: "layout_home",
+        layoutTemplate: "app",
         waitOn: function() {
-            return Subscriptions;
+            return CreateSubscriptions([
+                "navbar",
+                "footer",
+                "spheres"
+            ]);
         },
         action: function(){
             var router = this;
             var params = router.params;
 
-            router.render('app', {
-                to: "app",
+            router.render('spheres', {
                 data: function () {
                     return {
-                        content: ContentAreas
+                        content: VM.sections["spheres"].service.getContent()
                     }
                 }
             });
 
-            ContentAreas.forEach(function(area) {
-                router.render(area, {
-                        to: area,
-                        data: function() {
-                            return {
-                                content: VM.sections[area].service.getContent()
-                            }
-                        }
+            router.render('navbar', {
+                to: "navbar",
+                data: function () {
+                    return {
+                        content: VM.sections["navbar"].service.getContent()
                     }
-                );
+                }
+            });
+            router.render('footer', {
+                to: "footer",
+                data: function () {
+                    return {
+                        content: VM.sections["footer"].service.getContent()
+                    }
+                }
+            });
+        }
+    }
+);
+
+//
+Router.route('/bars', {
+        name: "bars",
+        loadingTemplate: "loading",
+        layoutTemplate: "app",
+        waitOn: function() {
+            return CreateSubscriptions([
+                "navbar",
+                "footer",
+                "bars"
+            ]);
+        },
+        action: function(){
+            var router = this;
+            var params = router.params;
+
+            router.render('bars', {
+                data: function () {
+                    return {
+                        content: VM.sections["bars"].service.getContent()
+                    }
+                }
+            });
+
+            router.render('navbar', {
+                to: "navbar",
+                data: function () {
+                    return {
+                        content: VM.sections["navbar"].service.getContent()
+                    }
+                }
+            });
+            router.render('footer', {
+                to: "footer",
+                data: function () {
+                    return {
+                        content: VM.sections["footer"].service.getContent()
+                    }
+                }
             });
         }
     }

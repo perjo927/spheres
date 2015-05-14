@@ -1,12 +1,18 @@
+var isDevEnv = function () {
+    return function() {
+        return Session.equals("environment", "development");
+    };
+};
+
 Template.app.helpers({
-    counter: function () {
-        return Session.get('counter');
+    isDev: function () {
+        var checkDev = isDevEnv();
+        return checkDev();
     }
 });
 
+
 Template.app.events({
     'click button': function () {
-        // increment the counter when button is clicked
-        Session.set('counter', Session.get('counter') + 1);
     }
 });

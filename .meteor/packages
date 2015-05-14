@@ -5,9 +5,17 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 mquandalle:jade
 appcache
 fourseven:scss
 audit-argument-checks
 underscore
+iron:router
+jquery
+accounts-ui
+materialize:materialize
+webapp
+accounts-password
+aldeed:console-me
+msavin:mongol
+useraccounts:materialize

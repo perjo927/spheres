@@ -4,7 +4,6 @@
 
 
 body {
-  //margin: -0.2em;
   background-color: $black;
   //background: $url_0;
 }
@@ -45,14 +44,6 @@ body {
   }
 }
 
-#s {
-  width: 500px;
-  height: 500px;
-  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-  border-radius: 50%;
-  animation: pulsate 2s ease-in-out 1s infinite alternate;
-}
-
 
 .shake {
   display: inline-block;
@@ -63,7 +54,9 @@ body {
 
 .flexcontainer {
   background: rgba(0,0,0,.95);
-  min-height: 100vh;
+  min-height: 80vh;
+  padding: 0.5rem 0.5rem;
+
   display: flex;
   flex-direction: row;
   align-items: flex-end;

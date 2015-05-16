@@ -1,27 +1,21 @@
 template(name="bars")
     with content
-        a(class="white-text" href="/") Bars
-        h1(class="white-text") Skills
+        a.white-text(href="/") Bars
+        h3.center.white-text
+            | #{skill}
+            | skills (switch/swipe/paginate)
 
-        .flexcontainer
-            // TODO: table / gradient : Minor, medium, major
-            // each bar
-            // TODO: (go from small to big, blue to green to yellow red)
-            // TODO: how to size
-            .bar(style="background: blue;")
-                h5(class="black-text")
-                    | Text: JS
-            .bar
-                h5(class="black-text") Ruby
-                div #
-            .bar
-                h5(class="black-text") CSS
-                div #
-                div #
-            .bar
-                h5(class="black-text") HTML
-                div #
-                div #
-                div #
-                div #
-                div #
+        table.responsive-table
+            thead
+                tr.white-text
+                    th.center.blue(data-field='cold') Cold
+                    th.center.green(data-field='lukewarm') Lukewarm
+                    th.center.red(data-field='hot') Hot
+            tbody
+        .mainBody
+            .flexcontainer
+                // TODO: (go from small to big, blue to green to yellow red)
+                // TODO: how to size
+                each skillSet
+                    .bar(style="background: blue; height: #{level}px; ")
+                        h6.white-text= text

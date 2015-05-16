@@ -8,7 +8,7 @@ body {
   //background: $url_0;
 }
 
-
+// SPHERES
 #sphere {
   position: relative;
   width: 300px;
@@ -52,24 +52,32 @@ body {
 }
 
 
+// BARS
+.mainBody {
+  position: absolute;
+  bottom: 1rem;
+  width:100%;
+}
+
 .flexcontainer {
   background: rgba(0,0,0,.95);
-  min-height: 80vh;
+  min-height: 100%;
   padding: 0.5rem 0.5rem;
 
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
 
+
 .bar {
-  min-height: 1vh;
-  max-height: 100vh;
-  height:  auto;
-  border: 0.3rem outset rgba(155,225,23,0.5);
+  min-height: 1rem;
+
+  border: 0.3rem outset rgba(155,225,23,0.5); // TODO: Variable
   border-radius: 0.5rem;
   margin: 0.5rem;
-  background: rgba(155,225,23,0.5);
+  background: rgba(155,225,23,0.5); // TODO: Variable
   text-align: center;
 
   box-shadow: 0.1rem 0.1rem 2rem 0.1rem rgba(122,222,33, 0.5);
@@ -78,16 +86,11 @@ body {
 
   transition: all 0.3s ease-in-out;
 
-
   animation-name: easeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
 
-  /*animation-name: glowShadow;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-duration: 1s; */
 }
 
 .bar:hover {

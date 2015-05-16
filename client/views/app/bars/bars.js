@@ -1,16 +1,28 @@
+var thisViewName = "bars";
 
-
-/* */
-Template.bars.onRendered(function () {
-
-});
-
-/* */
-Template.bars.helpers({
+//
+Template[thisViewName].onRendered(function () {
 
 });
 
-/* */
-Template.bars.events({
+//
+Template[thisViewName].helpers({
+    skill: function () {
+      return Session.get("skillSet");
+    },
+    skillSet: function () {
+        var selectedSkill = Session.get("skillSet");
+        var skillSet = this.skills[selectedSkill];
+
+        skillSet.forEach(function (skill, index, array) {
+
+        });
+
+        return skillSet.reverse();
+    }
+});
+
+//
+Template[thisViewName].events({
 
 });

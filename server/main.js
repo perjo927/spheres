@@ -2,11 +2,6 @@
 Meteor.startup(function () {
     // code to run on server at startup
 
-    // Already in meteor/server/boot.js ?
-    //Accounts.config({
-    //    forbidClientAccountCreation : true
-    //});
-
     var assets = JSON.parse(Assets.getText('private.json'));
     var admin = assets.admin;
 

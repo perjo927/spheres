@@ -67,7 +67,7 @@ Router.route('/', {
 );
 
 //
-Router.route('/bars', {
+Router.route('/bars/:_id', {
         name: "bars",
         loadingTemplate: "loading",
         layoutTemplate: "app",
@@ -81,14 +81,6 @@ Router.route('/bars', {
         action: function(){
             var router = this;
             var params = router.params;
-
-            router.render('bars', {
-                data: function () {
-                    return {
-                        content: VM.sections["bars"].service.getContent()
-                    }
-                }
-            });
 
             router.render('navbar', {
                 to: "navbar",
@@ -106,6 +98,21 @@ Router.route('/bars', {
                     }
                 }
             });
+
+            router.render('bars', {
+                data: function () {
+                    var content = VM.sections["bars"].service.getContent();
+                    return {
+                        content: {
+                            skillType: params._id,
+                            skills: content().skills
+                        }
+                    }
+                }
+            });
+
         }
     }
 );
+
+// TODO : 404, 500 ,etc

@@ -26,6 +26,12 @@ var setColor = function (skillElement, i, length) {
 
 var setHeight = function (that) {
     var bars = that.$('.bar');
+
+    if (bars.length === 0) {
+        console.debug("return");
+        return;
+    }
+
     var barsBody = that.$('.barsBody');
     var border = that.$('#border');
 
@@ -43,24 +49,41 @@ var setHeight = function (that) {
 //
 Template[thisViewName].onRendered(function () {
     var self = this;
-    setTimeout(function () {
-        setHeight(self);
-    },700);
+    var skillsObject = this.data.content.skills;
+    var skillSetTypes = Object.keys(skillsObject);
+    var currentSet = 0;
+    console.debug();
+
+    Meteor.setInterval(function(){
+        var newSet = skillSetTypes[currentSet++];
+    //
+        if (currentSet === skillSetTypes.length) {
+            currentSet = 0;
+        }
+        Router.go("bars", {_id: newSet})
+    },10* 1000);
+
 });
 
 //
 Template[thisViewName].helpers({
     skill: function () {
-        return Session.get("skillSet");
+        return this.skillType;
     },
     skillSet: function () {
-        var selectedSkill = Session.get("skillSet");
-        var skillSet = this.skills[selectedSkill].reverse();
+//
+        var selectedSkill = this.skillType;
+        var skillSet = this.skills[selectedSkill];
         var length = skillSet.length;
+        var that = Template.instance();
 
-        skillSet.forEach(function (element,index,array) {
+        skillSet.reverse().forEach(function (element,index) {
             setColor(element,index,length);
         });
+        Meteor.setTimeout(function () {
+            setHeight(that);
+        },700);
+
 
         return skillSet;
     }

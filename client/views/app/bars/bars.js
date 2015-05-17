@@ -53,7 +53,7 @@ Template[thisViewName].onRendered(function () {
     var currentSet = 0;
     console.debug();
 
-    Meteor.setInterval(function(){
+    this.intervalId = Meteor.setInterval(function(){
         var newSet = skillSetTypes[currentSet++];
 
         if (currentSet === skillSetTypes.length) {
@@ -62,6 +62,10 @@ Template[thisViewName].onRendered(function () {
         Router.go("bars", {_id: newSet})
     },10* 1000);
 
+});
+
+Template[thisViewName].onDestroyed(function () {
+    Meteor.clearInterval(this.intervalId);
 });
 
 //

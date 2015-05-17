@@ -48,7 +48,6 @@ var setHeight = function (that) {
 
 //
 Template[thisViewName].onRendered(function () {
-    var self = this;
     var skillsObject = this.data.content.skills;
     var skillSetTypes = Object.keys(skillsObject);
     var currentSet = 0;
@@ -56,7 +55,7 @@ Template[thisViewName].onRendered(function () {
 
     Meteor.setInterval(function(){
         var newSet = skillSetTypes[currentSet++];
-    //
+
         if (currentSet === skillSetTypes.length) {
             currentSet = 0;
         }
@@ -83,7 +82,6 @@ Template[thisViewName].helpers({
         Meteor.setTimeout(function () {
             setHeight(that);
         },700);
-
 
         return skillSet;
     }

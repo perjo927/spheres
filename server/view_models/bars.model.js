@@ -26,6 +26,10 @@ var skills = {
             level: 67
         },
         {
+            text: "Java",
+            level: 60
+        },
+        {
             text: "C++",
             level: 50
         },

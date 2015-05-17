@@ -1,16 +1,20 @@
 template(name="bars")
     with content
         a.white-text(href="/") Bars
-        h3.center.white-text
-            | #{skill}
-            | skills (switch/swipe/paginate)
+        h3.center.white-text= skill
+
 
         table
             thead
-                tr.white-text
-                    th.center.blue(data-field='cold') Cold
-                    th.center.green(data-field='lukewarm') Lukewarm
-                    th.center.red(data-field='hot') Hot
+                tr
+                    th.center.blue-text(data-field='cold')
+                        i.small.mdi-action-trending-down
+                        | Cold
+                    th.center.green-text(data-field='lukewarm')
+                        | Lukewarm
+                    th.center.red-text(data-field='hot')
+                        | Hot
+                        i.small.mdi-action-trending-up
             tbody
 
         #border

@@ -24,26 +24,28 @@ var setColor = function (skillElement, i, length) {
     }
 };
 
-var setHeight = function (skillElement, i, context) {
-
-};
-
-//
-Template[thisViewName].onRendered(function () {
-    var bars = this.$('.bar');
-    var barsBody = this.$('.barsBody');
-    var border = this.$('#border');
+var setHeight = function (that) {
+    var bars = that.$('.bar');
+    var barsBody = that.$('.barsBody');
+    var border = that.$('#border');
 
     var barsBodyTop = barsBody.position().top;
     var borderTop = border.position().top;
     var gap = barsBodyTop - borderTop; // How much space is left to fill
-    
+
     bars.each(function (barIndex, bar) {
         var thisHeight = $(bar).height();
         var percentage = thisHeight * 0.01;
-        console.debug(thisHeight, gap * percentage );
         $(bar).height(gap*percentage + thisHeight);
     });
+};
+
+//
+Template[thisViewName].onRendered(function () {
+    var self = this;
+    setTimeout(function () {
+        setHeight(self);
+    },700);
 });
 
 //

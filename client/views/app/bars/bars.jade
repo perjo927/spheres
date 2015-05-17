@@ -5,16 +5,18 @@ template(name="bars")
             | #{skill}
             | skills (switch/swipe/paginate)
 
-        table.responsive-table
+        table
             thead
                 tr.white-text
                     th.center.blue(data-field='cold') Cold
                     th.center.green(data-field='lukewarm') Lukewarm
                     th.center.red(data-field='hot') Hot
             tbody
-        .mainBody
+
+        #border
+
+        .barsBody
             .flexcontainer
-                // TODO: (go from small to big, blue to green to yellow red)
                 // TODO: how to size
                 each skillSet
                     .bar(style="background: #{color}; height: #{level}px; ")

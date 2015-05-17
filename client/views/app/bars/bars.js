@@ -24,9 +24,26 @@ var setColor = function (skillElement, i, length) {
     }
 };
 
+var setHeight = function (skillElement, i, context) {
+
+};
+
 //
 Template[thisViewName].onRendered(function () {
+    var bars = this.$('.bar');
+    var barsBody = this.$('.barsBody');
+    var border = this.$('#border');
 
+    var barsBodyTop = barsBody.position().top;
+    var borderTop = border.position().top;
+    var gap = barsBodyTop - borderTop; // How much space is left to fill
+    
+    bars.each(function (barIndex, bar) {
+        var thisHeight = $(bar).height();
+        var percentage = thisHeight * 0.01;
+        console.debug(thisHeight, gap * percentage );
+        $(bar).height(gap*percentage + thisHeight);
+    });
 });
 
 //
@@ -38,7 +55,6 @@ Template[thisViewName].helpers({
         var selectedSkill = Session.get("skillSet");
         var skillSet = this.skills[selectedSkill].reverse();
         var length = skillSet.length;
-
 
         skillSet.forEach(function (element,index,array) {
             setColor(element,index,length);

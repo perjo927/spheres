@@ -39,18 +39,65 @@ var skills = {
         },
         {
             text: "SQL",
-            level: 6
+            level: 10
         },
         {
             text: "Erlang",
             level: 0
         }
     ],
-    "Methodologies":  {
-        "SOLID": 70
-    },
-    "Frameworks": {
-    }
+    "Frameworks": [
+        {
+            text: "Meteor",
+            level: 90
+        },
+        {
+            text: "Angular",
+            level: 80
+        },
+        {
+            text: "ASP.NET",
+            level: 75
+        },
+        {
+            text: "Material",
+            level: 70
+        },
+        {
+            text: "Can.js",
+            level: 65
+        },
+        {
+            text: "Knockout",
+            level: 60
+        },
+        {
+            text: "Django",
+            level: 55
+        },
+        {
+            text: "Ruby on rails",
+            level: 10
+        },
+        {
+            text: "Backbone",
+            level: 7
+        },
+        {
+            text: "React",
+            level: 6
+        },
+        {
+            text: "Flux",
+            level: 0
+        }
+    ],
+    "Methodologies":  [
+        {
+            text: "SOLID",
+            level: 50
+        }
+    ]
 
 };
 

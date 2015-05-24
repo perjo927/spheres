@@ -1,4 +1,6 @@
 @import "client\style\colors.scss";
+@import "client\style\keyframes.scss";
+
 
 .home-title {
     // TODO
@@ -9,6 +11,26 @@
     margin: 0.7rem 0 0.6rem 0;
     padding: 1rem;
 }
+
+
+.foo{
+    animation: type 4s steps(60, end);
+}
+
+.foo:nth-child(2){
+    animation: type2 8s steps(60, end);
+}
+
+
+
+span{
+    animation: blink 1s infinite;
+}
+
+::selection{
+    background: black;
+}
+
 @media only screen and(min-width : 992px) {
 
 }

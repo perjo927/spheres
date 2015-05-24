@@ -23,14 +23,6 @@
     box-shadow: -5px 5px 150px 20px $color_lima_90_approx;
   }
 }
-@keyframes shake {
-  0% {
-
-  }
-  100% {
-
-  }
-}
 
 @keyframes rotate {
   0% {
@@ -43,7 +35,7 @@
   }
 }
 
-@keyframes shake-little {
+@keyframes shake {
   0% { transform: translate(0px, 0px) rotate(0deg); }
   2% { transform: translate(-1px, 0px) rotate(-0.5deg); }
   4% { transform: translate(0px, 0px) rotate(-0.5deg); }
@@ -117,15 +109,23 @@
   }
 }
 
-
+// Typewriter effect
 @keyframes type {
-  from { width: 0; }
+  from {
+    width: 0;
+  }
 }
 
-@keyframes type2{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; }
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
 }
 
 @keyframes blink{

@@ -1,7 +1,11 @@
 
 /* */
 Template.spheres.onRendered(function () {
-
+    $('.arc').arctext({
+        radius: 82,
+        dir: -1
+        //, rotate: false
+    });
 });
 
 /* */

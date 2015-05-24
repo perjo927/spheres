@@ -22,8 +22,7 @@
 }
 
 
-
-span{
+.blink {
     animation: blink 1s infinite;
 }
 
@@ -31,6 +30,17 @@ span{
     background: black;
 }
 
+
+
+// Warped text
+.arc {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+
+// Media queries
 @media only screen and(min-width : 992px) {
 
 }

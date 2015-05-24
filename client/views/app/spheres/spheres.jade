@@ -1,10 +1,20 @@
 template(name="spheres")
     with content
         .foo.white-text.press-start-font.home-title > #{home.title}
-            span.white-text |
+            span.blink.white-text |
+
 
         #sphere
         .row
             .shake
-                #sphere(class="white")
-                #sphere(class="blue")
+                #sphere(class="white").press-start-font
+                    .arc.white-text Skills
+                #sphere(class="blue").press-start-font
+                    .arc.white-text Portfolio
+
+
+
+
+
+
+

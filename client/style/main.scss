@@ -1,11 +1,16 @@
 @import "client\style\colors.scss";
 @import "client\style\urls.scss";
 @import "client\style\keyframes.scss";
-
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body {
   background-color: $black;
   //background: $url_0;
+}
+
+// TODO: media queries for font size
+.press-start-font {
+  font-family: 'Press Start 2P', cursive;
 }
 
 // SPHERES

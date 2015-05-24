@@ -1,11 +1,11 @@
 
-var foo = [
-    {
-        bar: "baz"
-    }
-];
+var home =
+{
+    title: "Welcome to the universe of Programmer Per"
+};
+
 
 /* */
 VM.sections.spheres.docs = {
-    foo: foo
+    home: home
 };

@@ -22,6 +22,8 @@
 //    // or except: ['routeOne', 'routeTwo']
 //});
 
+// TODO: Controlller for footer and nvabar rendering
+
 /* */
 Router.route('/', {
         name: "home",

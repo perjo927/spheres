@@ -1,11 +1,18 @@
 
-var foo = [
+var navItems = [
     {
-        bar: "baz"
+        text: "Home",
+        link: "/",
+        color: "red"
+    },
+    {
+        text: "Skills",
+        link: "/bars/Languages",
+        color: "green"
     }
 ];
 
 /* */
 VM.sections.navbar.docs = {
-    foo: foo
+    navItems: navItems
 };

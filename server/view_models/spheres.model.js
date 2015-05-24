@@ -7,5 +7,6 @@ var home =
 
 /* */
 VM.sections.spheres.docs = {
-    home: home
+    home: home,
+    spheres: ViewModel.navItems
 };

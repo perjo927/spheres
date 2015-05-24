@@ -1,0 +1,28 @@
+@import "client\style\colors.scss";
+
+.home-title {
+    // TODO
+    //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0.5rem 0.2rem 2.5rem $color_dodger_blue_80_approx;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    margin: 0.7rem 0 0.6rem 0;
+    padding: 1rem;
+}
+@media only screen and(min-width : 992px) {
+
+}
+@media only screen and(max-width : 992px) {
+    .home-title {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        margin: 0.45rem 0 0.35rem 0;
+    }
+}
+@media only screen and(max-width : 600px) {
+    .home-title {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+        margin: 0.3rem 0 0.2rem 0;
+    }
+}

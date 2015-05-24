@@ -102,3 +102,26 @@ body {
   font-size: 2rem;
 }
 
+@media only screen and(min-width : 992px) {
+
+}
+
+@media only screen and(max-width : 992px) {
+
+}
+
+// TODO:
+//@media #{$medium-and-down} {
+@media only screen and(max-width : 600px) {
+
+}
+// TODO:
+//@media #{$small-and-down} {
+//  // styles for small screens and down //
+//}
+//@media #{$medium-and-up} {
+//  // styles for medium screens and larger //
+//}
+//@media #{$large-and-up} {
+//  // styles for large screens and up //
+//}

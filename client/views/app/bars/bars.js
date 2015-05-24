@@ -32,7 +32,7 @@ var setHeight = function (that) {
         return;
     }
 
-    var barsBody = that.$('.barsBody');
+    var barsBody = that.$('.bars-body');
     var border = that.$('#border');
 
     var barsBodyTop = barsBody.position().top;

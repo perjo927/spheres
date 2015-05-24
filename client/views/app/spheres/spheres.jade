@@ -3,18 +3,35 @@ template(name="spheres")
         .foo.white-text.press-start-font.home-title > #{home.title}
             span.blink.white-text |
 
-
-        #sphere
-        .row
-            .shake
-                #sphere(class="white").press-start-font
-                    .arc.white-text Skills
-                #sphere(class="blue").press-start-font
-                    .arc.white-text Portfolio
-
-
-
-
-
-
+        .container
+            .row
+                .col.s12.m4
+                    .shake
+                        .sphere.small-sphere(class="green").press-start-font
+                            .arc.white-text Skills
+                .col.s12.m4
+                    | &nbsp;
+                .col.s12.m4
+                    .shake
+                        .sphere.small-sphere(class="red").press-start-font
+                            .arc.white-text CV
+            .row
+                .col.s12.m4
+                    | &nbsp;
+                .col.s12.m4
+                    .sphere(class="yellow").press-start-font
+                        .arc.white-text Per
+                .col.s12.m4
+                    | &nbsp;
+            .row
+                .col.s12.m4
+                    .shake
+                        .sphere.small-sphere(class="white").press-start-font
+                            .arc.white-text Social
+                .col.s12.m4
+                    | &nbsp;
+                .col.s12.m4
+                    .shake
+                        .sphere.small-sphere(class="blue").press-start-font
+                            .arc.white-text Portfolio
 

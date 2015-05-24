@@ -14,11 +14,13 @@ body {
 }
 
 // SPHERES
-#sphere {
+// TODO: to Sass, to own file
+// TODO: No åixel values, rem instead
+.sphere {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 2em auto;
+  width: 200px;
+  height: 200px;
+  margin: 1em auto;
   background: $color_green_approx;
   //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
   border-radius: 50%;
@@ -27,6 +29,11 @@ body {
   transition: height 1.5s, width 1s;
   //Instead of the line below you could use @includetransition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
   transition-timing-function: ease-in-out;
+
+  &.small-sphere {
+    width: 150px;
+    height: 150px;
+  }
 
   &:hover {
     width: 600px;
@@ -58,13 +65,14 @@ body {
 
 
 // BARS
-.barsBody {
+// TODO: to own file
+.bars-body {
   position: absolute;
   bottom: 1rem;
   width:100%;
 }
 
-.flexcontainer {
+.bars-container {
   background: rgba(0,0,0,.95);
   padding: 0.5rem 0.5rem;
   height: 100%;

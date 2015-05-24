@@ -12,8 +12,11 @@
     padding: 1rem;
 }
 
-
+// TODO: change name of class
 .foo{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
     animation: type 4s steps(60, end);
 }
 
@@ -35,8 +38,8 @@
 // Warped text
 .arc {
     position: relative;
-    top: 100px;
-    left: 100px;
+    top: 62px;
+    left: 37px;
 }
 
 

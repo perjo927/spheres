@@ -36,12 +36,24 @@ body {
       width: 14rem;
       height: 14rem;
     }
+    &:active {
+      opacity: 0.8;
+      width: 10rem;
+      height: 10rem;
+      font-size: smaller;
+    }
   }
 
   &:hover {
     width: 17rem;
     height: 17rem;
     font-size: larger;
+  }
+  &:active {
+    opacity: 0.8;
+    width: 11rem;
+    height: 11rem;
+    font-size: smaller;
   }
   &:before {
     content: "";

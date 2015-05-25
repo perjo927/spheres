@@ -1,20 +1,22 @@
 template(name="spheres")
     with content
-        .foo.white-text.press-start-font.home-title > #{home.title}
+        .type-text.white-text.press-start-font.home-title > #{home.title}
             span.blink.white-text |
 
         .container
             .row
                 .col.s12.m4
                     .shake
-                        .sphere.small-sphere(class="green").press-start-font
-                            .arc.white-text Skills
+                        a(href="#")
+                            .sphere.small-sphere.anti-gravity-left.press-start-font(class="green")
+                                .arc.white-text Skills
                 .col.s12.m4
                     | &nbsp;
                 .col.s12.m4
                     .shake
-                        .sphere.small-sphere(class="red").press-start-font
-                            .arc.white-text CV
+                        a(href="#")
+                            .sphere.small-sphere.anti-gravity-right(class="red").press-start-font
+                                .arc.white-text CV
             .row
                 .col.s12.m4
                     | &nbsp;
@@ -26,12 +28,12 @@ template(name="spheres")
             .row
                 .col.s12.m4
                     .shake
-                        .sphere.small-sphere(class="white").press-start-font
+                        .sphere.small-sphere.gravity-left(class="white").press-start-font
                             .arc.white-text Social
                 .col.s12.m4
                     | &nbsp;
                 .col.s12.m4
                     .shake
-                        .sphere.small-sphere(class="blue").press-start-font
+                        .sphere.small-sphere.gravity-right(class="blue").press-start-font
                             .arc.white-text Portfolio
 

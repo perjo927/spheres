@@ -8,36 +8,40 @@ body {
   //background: $url_0;
 }
 
-// TODO: media queries for font size
 .press-start-font {
   font-family: 'Press Start 2P', cursive;
 }
 
 // SPHERES
 // TODO: to Sass, to own file
-// TODO: No pixel values, rem instead
 .sphere {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 16rem;
+  height: 16rem;
   margin: 1em auto;
   background: $color_green_approx;
   //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
   border-radius: 50%;
   animation: rotate 5s linear infinite;
   //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: height 1.5s, width 1s;
+  transition: height 0.3s, width 0.2s;
   //Instead of the line below you could use @includetransition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
   transition-timing-function: ease-in-out;
 
   &.small-sphere {
-    width: 150px;
-    height: 150px;
+    width: 13rem;
+    height: 13rem;
+
+    &:hover {
+      width: 14rem;
+      height: 14rem;
+    }
   }
 
   &:hover {
-    width: 600px;
-    height: 600px;
+    width: 17rem;
+    height: 17rem;
+    font-size: larger;
   }
   &:before {
     content: "";
@@ -49,13 +53,25 @@ body {
     top: 0;
     left: 0;
     opacity: 0.425;
-    background: radial-gradient(circle at 100px 100px, $color_amulet_approx, $color_spring_rain_approx);
+    background: radial-gradient(circle at 10rem 10rem, $color_amulet_approx, $color_spring_rain_approx);
     //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: -5px 5px 150px 20px $color_lima_90_approx;
+    box-shadow: -1rem 1rem 10rem 3rem $color_lima_90_approx;
     animation: pulsate 2s ease-in-out 1s infinite alternate;
   }
 }
 
+.anti-gravity-left {
+  animation: anti-gravitate-left 4s ease-in-out;
+}
+.anti-gravity-right {
+  animation: anti-gravitate-right 2s ease-out;
+}
+.gravity-left {
+  animation: gravitate-left 3s linear;
+}
+.gravity-right {
+  animation: gravitate-right 5s ease-in-out;
+}
 
 .shake {
   display: inline-block;

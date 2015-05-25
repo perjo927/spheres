@@ -4,11 +4,31 @@ ViewModel.navItems = [
     {
         text: "Home",
         link: "/",
-        color: "red"
+        color: "light-green"
+    },
+    {
+        text: "Per",
+        link: "/",
+        color: "yellow"
     },
     {
         text: "Skills",
         link: "/bars/Languages",
-        color: "green"
+        color: "cyan"
+    },
+    {
+        text: "CV",
+        link: "/",
+        color: "orange"
+    },
+    {
+        text: "Social",
+        link: "/",
+        color: "lime"
+    },
+    {
+        text: "Portfolio",
+        link: "/",
+        color: "pink"
     }
 ];

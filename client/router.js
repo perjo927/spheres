@@ -117,4 +117,49 @@ Router.route('/bars/:_id', {
     }
 );
 
+//
+Router.route('/venn/', {
+        name: "venn",
+        loadingTemplate: "loading",
+        layoutTemplate: "app",
+        waitOn: function() {
+            return CreateSubscriptions([
+                "navbar",
+                "footer",
+                "venn"
+            ]);
+        },
+        action: function(){
+            var router = this;
+
+            router.render('navbar', {
+                to: "navbar",
+                data: function () {
+                    return {
+                        content: VM.sections["navbar"].service.getContent()
+                    }
+                }
+            });
+            router.render('footer', {
+                to: "footer",
+                data: function () {
+                    return {
+                        content: VM.sections["footer"].service.getContent()
+                    }
+                }
+            });
+
+            router.render('venn', {
+                data: function () {
+                    return {
+                        content: VM.sections["venn"].service.getContent()
+                    }
+                }
+            });
+
+        }
+    }
+);
+
+
 // TODO : 404, 500 ,etc

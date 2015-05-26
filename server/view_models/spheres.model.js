@@ -1,6 +1,5 @@
 
-var home =
-{
+var home = {
     title: "Welcome to the universe of Programmer Per"
 };
 

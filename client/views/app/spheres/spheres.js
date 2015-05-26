@@ -2,7 +2,7 @@
 /* */
 Template.spheres.onRendered(function () {
     $('.arc').arctext({
-        radius: 82,
+        radius: 75,
         dir: -1
         //,fitText: true
         //, rotate: false
@@ -11,10 +11,7 @@ Template.spheres.onRendered(function () {
 
 /* */
 Template.spheres.helpers({
-    log: function() {
-        console.info(this);
-        return "this";
-    }
+
 });
 
 /* */

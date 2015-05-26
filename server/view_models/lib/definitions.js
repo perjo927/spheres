@@ -8,7 +8,7 @@ ViewModel.navItems = [
     },
     {
         text: "Per",
-        link: "/",
+        link: "/venn",
         color: "yellow"
     },
     {

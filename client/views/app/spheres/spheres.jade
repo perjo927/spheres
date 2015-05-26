@@ -1,5 +1,6 @@
 template(name="spheres")
     with content
+        // TODO: add child element to type-text for additional/overflow rows of typing
         .type-text.white-text.press-start-font.home-title > #{home.title}
             span.blink.white-text |
 
@@ -21,8 +22,9 @@ template(name="spheres")
                 .col.s12.m4
                     | &nbsp;
                 .col.s12.m4
-                    .sphere(class="yellow").press-start-font
-                        .arc.white-text Per
+                    a(href="/venn")
+                        .sphere(class="yellow").press-start-font
+                            .arc.white-text Per
                 .col.s12.m4
                     | &nbsp;
             .row

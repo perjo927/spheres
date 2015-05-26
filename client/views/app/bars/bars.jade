@@ -1,7 +1,7 @@
 template(name="bars")
     with content
         .row
-            h3.skillTitle.center.white-text.press-start-font=skill
+            h4.skillTitle.center.white-text.press-start-font=skill
         //
         table.press-start-font
             thead
@@ -23,4 +23,4 @@ template(name="bars")
                 // TODO: how to size
                 each skillSet
                     .bar(style="background: #{color}; height: #{level}px; ")
-                        h6.white-text= text
+                        .bar-text.white-text= text

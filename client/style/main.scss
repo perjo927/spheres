@@ -139,17 +139,23 @@ body {
 }
 
 @media only screen and(min-width : 992px) {
-
+  .bar-text {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and(max-width : 992px) {
-
+  .bar-text {
+    font-size: 0.7rem;
+  }
 }
 
 // TODO:
 //@media #{$medium-and-down} {
 @media only screen and(max-width : 600px) {
-
+  .bar-text {
+    font-size: 0.5rem;
+  }
 }
 // TODO:
 //@media #{$small-and-down} {

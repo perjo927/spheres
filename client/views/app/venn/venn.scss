@@ -46,6 +46,8 @@ $blue_25: rgba(0,0,255,.25);
     padding: 1em;
     position: relative;
     height: 40em;
+    color: $white;
+
     span {
         display: none;
     }
@@ -58,6 +60,7 @@ $blue_25: rgba(0,0,255,.25);
     height: 25em;
     text-align: center;
     position: absolute;
+
     p {
         height: 25em;
         width: 15em;

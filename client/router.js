@@ -161,5 +161,135 @@ Router.route('/venn/', {
     }
 );
 
+//
+Router.route('/cards/', {
+        name: "cards",
+        loadingTemplate: "loading",
+        layoutTemplate: "app",
+        waitOn: function() {
+            return CreateSubscriptions([
+                "navbar",
+                "footer",
+                "cards"
+            ]);
+        },
+        action: function(){
+            var router = this;
 
+            router.render('navbar', {
+                to: "navbar",
+                data: function () {
+                    return {
+                        content: VM.sections["navbar"].service.getContent()
+                    }
+                }
+            });
+            router.render('footer', {
+                to: "footer",
+                data: function () {
+                    return {
+                        content: VM.sections["footer"].service.getContent()
+                    }
+                }
+            });
+
+            router.render('cards', {
+                data: function () {
+                    return {
+                        content: VM.sections["cards"].service.getContent()
+                    }
+                }
+            });
+
+        }
+    }
+);
+
+//
+Router.route('/social/', {
+        name: "social",
+        loadingTemplate: "loading",
+        layoutTemplate: "app",
+        waitOn: function() {
+            return CreateSubscriptions([
+                "navbar",
+                "footer",
+                "social"
+            ]);
+        },
+        action: function(){
+            var router = this;
+
+            router.render('navbar', {
+                to: "navbar",
+                data: function () {
+                    return {
+                        content: VM.sections["navbar"].service.getContent()
+                    }
+                }
+            });
+            router.render('footer', {
+                to: "footer",
+                data: function () {
+                    return {
+                        content: VM.sections["footer"].service.getContent()
+                    }
+                }
+            });
+
+            router.render('social', {
+                data: function () {
+                    return {
+                        content: VM.sections["social"].service.getContent()
+                    }
+                }
+            });
+
+        }
+    }
+);
+
+//
+Router.route('/portfolio/', {
+        name: "portfolio",
+        loadingTemplate: "loading",
+        layoutTemplate: "app",
+        waitOn: function() {
+            return CreateSubscriptions([
+                "navbar",
+                "footer",
+                "portfolio"
+            ]);
+        },
+        action: function(){
+            var router = this;
+
+            router.render('navbar', {
+                to: "navbar",
+                data: function () {
+                    return {
+                        content: VM.sections["navbar"].service.getContent()
+                    }
+                }
+            });
+            router.render('footer', {
+                to: "footer",
+                data: function () {
+                    return {
+                        content: VM.sections["footer"].service.getContent()
+                    }
+                }
+            });
+
+            router.render('portfolio', {
+                data: function () {
+                    return {
+                        content: VM.sections["portfolio"].service.getContent()
+                    }
+                }
+            });
+
+        }
+    }
+);
 // TODO : 404, 500 ,etc

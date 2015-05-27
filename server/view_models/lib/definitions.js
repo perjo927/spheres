@@ -18,17 +18,17 @@ ViewModel.navItems = [
     },
     {
         text: "CV",
-        link: "/",
+        link: "/cards",
         color: "orange"
     },
     {
         text: "Social",
-        link: "/",
+        link: "/social",
         color: "lime"
     },
     {
         text: "Portfolio",
-        link: "/",
+        link: "/portfolio",
         color: "pink"
     }
 ];

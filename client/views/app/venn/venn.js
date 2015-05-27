@@ -11,8 +11,8 @@ var options = {
 
 var responsiveOptions = [
     ['screen and (min-width: 640px)', {
-        chartPadding: 30,
-        labelOffset: 100,
+        chartPadding: 5,
+        labelOffset: 40,
         labelDirection: 'explode',
         labelInterpolationFnc: function(value) {
             return value;

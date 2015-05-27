@@ -35,10 +35,9 @@ border-radius: 100px;
 
 /// VENN #2 ///
 //colors
-$black: #000;
-$red_25: rgba(255,0,0,.25);
-$green_25: rgba(0,255,0,.25);
-$blue_25: rgba(0,0,255,.25);
+$pink_55: rgba(233,30,99,.55);
+$cyan_55: rgba(0,188,212,.55);
+$lime_55: rgba(205,220,57,.55);
 
 #infographic {
     width: 40em;
@@ -53,7 +52,6 @@ $blue_25: rgba(0,0,255,.25);
     }
 }
 .circle {
-    border: .2em solid $black;
     //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
     border-radius: 50%;
     width: 25em;
@@ -71,12 +69,12 @@ $blue_25: rgba(0,0,255,.25);
 #c1 {
     top: 0;
     left: 0;
-    background-color: $red_25;
+    background-color: $pink_55;
 }
 #c2 {
     top: 0;
     left: 15em;
-    background-color: $green_25;
+    background-color: $cyan_55;
     p {
         padding-left: 10em;
     }
@@ -84,7 +82,7 @@ $blue_25: rgba(0,0,255,.25);
 #c3 {
     top: 14em;
     left: 7.5em;
-    background-color: $blue_25;
+    background-color: $lime_55;
     p {
         width: 25em;
         height: 15em;

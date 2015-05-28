@@ -1,40 +1,6 @@
 //colors
-// TODO: Move to colors
+// TODO: Move to colors or use material colors in markup
 $white: #fff;
-$blue: blue;
-$red_50: rgba(255,0,0,0.5);
-
-
-
-.venn {
-    float: left;
-    width: 100px;
-    height: 100px;
-//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-border-radius: 100px;
-    color: $white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1em;
-    line-height: 100px;
-    text-transform: uppercase;
-    position: relative;
-}
-.one {
-    background-color: $blue;
-}
-.two::before {
-    content: 'c';
-    position: absolute;
-    left: 10px;
-}
-.two {
-    background-color: $red_50;
-    margin-left: -30px;
-}
-
-/// VENN #2 ///
-//colors
 $pink_55: rgba(233,30,99,.55);
 $cyan_55: rgba(0,188,212,.55);
 $lime_55: rgba(205,220,57,.55);
@@ -47,9 +13,6 @@ $lime_55: rgba(205,220,57,.55);
     height: 40em;
     color: $white;
 
-    span {
-        display: none;
-    }
 }
 .circle {
     //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)

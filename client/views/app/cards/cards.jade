@@ -1,6 +1,24 @@
 template(name="cards")
-    h1.white-text.press-start-font Cards
+    h1.white-text.press-start-font CV
 
     .container
         .row
-            .white-text Hej
+            .col.s12.m6
+            // each cvItems
+            .card.blue
+                .waves-effect.waves-block.waves-light
+                    h1.center.activator Yo
+                .card-content.white
+                    span.card-title.activator.grey-text.text-darken-4
+                        | Card Title
+                        i.mdi-navigation-more-vert.right
+                    p
+                        a(href='#') This is a link
+                .card-reveal
+                    span.card-title.grey-text.text-darken-4
+                        | Card Title
+                        i.mdi-navigation-close.right
+                    p
+                        | Here is some more information about this product that is only revealed once clicked on.
+
+

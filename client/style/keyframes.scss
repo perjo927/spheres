@@ -24,6 +24,24 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    box-shadow: 0 0 3em 0 rgba(255,200,0,0.1);
+  }
+  25% {
+    box-shadow: 0 0 3.3em 0.2em rgba(255,200,10,0.2);
+  }
+  50% {
+    box-shadow: 0 0 3.7em 0.5em rgba(255,200,15,0.5);
+  }
+  75% {
+    box-shadow: 0 0 4.3em 0.7em rgba(255,200,20,0.4);
+  }
+  100% {
+    box-shadow: 0 0 4em 1em rgba(255,200,30,0.3);
+  }
+}
+
 @keyframes rotate {
   0% {
     //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)

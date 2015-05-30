@@ -32,14 +32,9 @@ var options ={
     //Number - Amount of animation steps
     animationSteps : 100,
     //String - Animation easing effect
-    animationEasing : "easeOutBounce",
+    animationEasing : "easeInOutQuart",
     //Boolean - Whether we animate the rotation of the Doughnut
-    animateRotate : true,
-    //Boolean - Whether we animate scaling the Doughnut from the centre
-    animateScale : true,
-// Boolean - whether or not the chart should be responsive and resize when the browser does.
-    //responsive: true,
-
+    animateRotate : true
 };
 
 /* */
@@ -48,7 +43,7 @@ Template.social.onRendered(function () {
     // Get the context of the canvas element we want to select
     //var ctx = document.getElementById("myChart").getContext("2d");
     // Get context with jQuery - using jQuery's .get() method.
-    var ctx = $("#myChart").get(0).getContext("2d");
+    var ctx = $("#pie-chart").get(0).getContext("2d");
 
 
 // And for a doughnut chart

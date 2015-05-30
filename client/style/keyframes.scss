@@ -7,6 +7,19 @@
     transform: rotateX(360deg) rotateY(360deg);
   }
 }
+
+
+@keyframes fade-in {
+  from {
+    background-color: white;
+    opacity: 0;
+  }
+  to {
+    background-color: black;
+    opacity: 1;
+  }
+}
+
 @keyframes show {
   to {
     opacity: 1;

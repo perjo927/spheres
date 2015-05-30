@@ -1,5 +1,29 @@
+.rec {
+  line-height: 80%;
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in;
+}
+
 .pie-chart {
   float: left;
   width: 20rem;
   height: 20rem;
+}
+
+.social-card {
+  box-shadow: 0 0 4em 0.3em rgba(255,200,30,0.3);
+  width: 10rem;
+  height: 10rem;
+  opacity: 1;
+
+  &:hover {
+    border: 0.3em inset #fff;
+    box-shadow: 0 0 5rem 1rem rgba(255,255, 255, 0.3);
+    width: 11rem;
+    height: 11rem;
+    color: white;
+    cursor: pointer;
+  }
 }

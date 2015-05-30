@@ -6,25 +6,80 @@ template(name="social")
             h1.center.white-text.press-start-font Social
 
         .row
-            p.flow-text.white-text
+            // TODO: Split into template
+            h4.white-text
                 | Per's presence on the web
-                | and its impact
+            .col.s6.m3
+                    .card-panel.social-card.fade-in.teal
+                        h1.center.icon-linkedin-squared
+            .col.s6.m3
+                .card-panel.social-card.fade-in.lime
+                    h1.center.icon-youtube
+            .col.s6.m3
+                .card-panel.social-card.fade-in.pink
+                    h1.center.icon-twitter
+            .col.s6.m3
+                .card-panel.social-card.fade-in.cyan
+                    h1.center.icon-soundcloud
+        br
+        br
 
         .row
-            p.flow-text.white-text
-                | Per's make-up
+            // TODO: Split into template
+            h4.white-text
+                | Recommendations
 
             canvas#pie-chart.pie-chart
 
-            .pink-text
-                b 77%
-                span Drive
-            .cyan-text
-                b 55%
-                span Delivery
-            .lime-text
+            p.flow-text.pink-text.rec
+                b 40%
+                span Driven
+            p.flow-text.cyan-text.rec
                 b 33%
-                span Creativity
-            .white-text
-                b 22%
-                span Cross-functionality
+                span Hard-working
+            p.flow-text.lime-text.rec
+                b 27%
+                span Creative
+
+        .row
+            .col.s12.m12
+                .card.blue.darken-1
+                    .card-content.white-text
+                        span.card-title.press-start-font Hannah @TicTail
+                        p
+                            i.mdi-editor-format-quote
+                            span
+                                i Per is one of the most driven, hard-working and sharp person I have worked with
+                            span.mdi-editor-format-quote
+                    .card-action
+                        a(href='#') Go to recommendation
+
+            // TODO: Scrollspy-reveal?
+            .col.s12.m12
+                .card.blue.darken-1
+                    .card-content.white-text
+                        span.card-title.press-start-font Marcus @ CoderDojo
+                        p
+                            i.mdi-editor-format-quote
+                            span
+                                i I love Per's drive! He has a great approach to problem solving, finds creative
+                                | solutions to tackle what the students think is hard to grasp, and is positive and fun
+                                | to be with
+                            span.mdi-editor-format-quote
+                    .card-action
+                        a(href='#') Go to recommendation
+
+            .col.s12.m12
+                .card.blue.darken-1
+                    .card-content.white-text
+                        span.card-title.press-start-font Ayse @ Invisible Monsters
+                        p
+                            i.mdi-editor-format-quote
+                            span
+                                i He has amazing skills to built new projects. His artistic nature combines
+                                | with his other qualifications in a greater degree. He creates wonders on many media.
+                                | Also his personality rocks!
+                            span.mdi-editor-format-quote
+                    .card-action
+                        a(href='#') Go to recommendation
+

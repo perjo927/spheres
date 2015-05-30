@@ -3,24 +3,38 @@ template(name="social")
 
     .container
         .row
-            h1.center.white-text.press-start-font Social
+            h2.center.white-text.press-start-font Social
 
         .row
             // TODO: Split into template
             h4.white-text
                 | Per's presence on the web
             .col.s6.m3
-                    .card-panel.social-card.fade-in.teal
+                    .card-panel.social-card.fade-in.blue.darken-3
                         h1.center.icon-linkedin-squared
             .col.s6.m3
-                .card-panel.social-card.fade-in.lime
+                .card-panel.social-card.fade-in.red
                     h1.center.icon-youtube
             .col.s6.m3
-                .card-panel.social-card.fade-in.pink
+                .card-panel.social-card.fade-in.light-blue
                     h1.center.icon-twitter
             .col.s6.m3
-                .card-panel.social-card.fade-in.cyan
+                .card-panel.social-card.fade-in.orange
                     h1.center.icon-soundcloud
+        br
+        br
+
+        h4.white-text
+            | Per's contact details
+
+        p.flow-text.white-text
+            i.mdi-communication-phone
+            span (+SE) 76 180 55 94
+            i.mdi-content-mail
+            span per.jonsson@betsson***.com
+
+        .row
+
         br
         br
 
@@ -40,6 +54,8 @@ template(name="social")
             p.flow-text.lime-text.rec
                 b 27%
                 span Creative
+
+        br
 
         .row
             .col.s12.m12

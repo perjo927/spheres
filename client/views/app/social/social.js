@@ -1,22 +1,22 @@
 
 var data = [
     {
-        value: 300,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
+        value: 60,
+        color:"#E91E63",
+        highlight: "#EC407A",
+        label: "Drive"
     },
     {
-        value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
+        value: 30,
+        color: "#00BCD4",
+        highlight: "#26C6DA",
+        label: "Delivery"
     },
     {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
+        value: 10,
+        color: "#CDDC39",
+        highlight: "#D4E157",
+        label: "Creativity"
     }
 ];
 

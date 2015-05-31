@@ -1,6 +1,43 @@
 template(name="portfolio")
-    h1.white-text.press-start-font Portfolio
+
 
     .container
         .row
-            .white-text Cross-functional
+            h1.white-text.press-start-font Portfolio
+            .white-text Cross-functional. Diversity.
+
+        .row
+            .col.s12.m6
+                .card.medium
+                    .card-image.waves-effect.waves-block.waves-light
+                        img.activator(src='http://materializecss.com/images/office.jpg')
+                    .card-content
+                        span.card-title.activator.grey-text.text-darken-4
+                            | Paul Wong: Art of Neutrality
+                            i.mdi-navigation-more-vert.right
+                        p
+                            a(href='#') Go to project
+                    .card-reveal
+                        span.card-title.grey-text.text-darken-4
+                            | Paul Wong: Art of Neutrality
+                            i.mdi-navigation-close.right
+                        p
+                            | Here is some more information about this product that is only revealed once clicked on.
+
+            .col.s12.m6
+                .card.medium
+                    .card-image.waves-effect.waves-block.waves-light
+                        img.activator(src='http://materializecss.com/images/office.jpg')
+                    .card-content
+                        span.card-title.activator.grey-text.text-darken-4
+                            | Ericsson
+                            i.mdi-navigation-more-vert.right
+                        p
+                            a(href='#') Go to project
+                    .card-reveal
+                        span.card-title.grey-text.text-darken-4
+                            | Ericsson
+                            i.mdi-navigation-close.right
+                        p
+                            | Here is some more information about this product that is only revealed once clicked on.
+

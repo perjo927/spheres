@@ -1,102 +1,101 @@
 template(name="social")
+    with content
+        .container
+            .row
+                h2.center.white-text.press-start-font Social
+
+            .row
+                // TODO: Split into template
+                h4.white-text
+                    | Presence
+                .col.s6.m3
+                        .card-panel.social-card.fade-in.blue.darken-3
+                            h1.center.icon-linkedin-squared
+                .col.s6.m3
+                    .card-panel.social-card.fade-in.red
+                        h1.center.icon-youtube
+                .col.s6.m3
+                    .card-panel.social-card.fade-in.light-blue
+                        h1.center.icon-twitter
+                .col.s6.m3
+                    .card-panel.social-card.fade-in.orange
+                        h1.center.icon-soundcloud
+            .row
+                h4.white-text
+                    | Contact
+
+                .col.s12.m6
+                    p.flow-text.contact
+                        i.mdi-communication-phone.green-text
+                        // Open app
+                        span.white-text (+SE) 76 180 55 94
+                .col.s12.m6
+                    p.flow-text.contact
+                        // Open app
+                        i.mdi-content-mail.green-text
+                        span.white-text per.jonsson@b***.com
+
+            .row
 
 
-    .container
-        .row
-            h2.center.white-text.press-start-font Social
+            .row
+                // TODO: Split into template
+                h4.white-text
+                    | Recommendations
 
-        .row
-            // TODO: Split into template
-            h4.white-text
-                | Presence
-            .col.s6.m3
-                    .card-panel.social-card.fade-in.blue.darken-3
-                        h1.center.icon-linkedin-squared
-            .col.s6.m3
-                .card-panel.social-card.fade-in.red
-                    h1.center.icon-youtube
-            .col.s6.m3
-                .card-panel.social-card.fade-in.light-blue
-                    h1.center.icon-twitter
-            .col.s6.m3
-                .card-panel.social-card.fade-in.orange
-                    h1.center.icon-soundcloud
-        .row
-            h4.white-text
-                | Contact
+                canvas#pie-chart.pie-chart
 
-            .col.s12.m6
-                p.flow-text.contact
-                    i.mdi-communication-phone.green-text
-                    // Open app
-                    span.white-text (+SE) 76 180 55 94
-            .col.s12.m6
-                p.flow-text.contact
-                    // Open app
-                    i.mdi-content-mail.green-text
-                    span.white-text per.jonsson@b***.com
+                p.flow-text.pink-text.rec
+                    b 40%
+                    span Driven
+                p.flow-text.cyan-text.rec
+                    b 33%
+                    span Hard-working
+                p.flow-text.lime-text.rec
+                    b 27%
+                    span Creative
 
-        .row
+            br
 
+            .row
+                .col.s12.m12
+                    .card.blue.darken-1
+                        .card-content.white-text
+                            span.card-title.press-start-font Hannah @TicTail
+                            p
+                                i.mdi-editor-format-quote
+                                span
+                                    i Per is one of the most driven, hard-working and sharp person I have worked with
+                                span.mdi-editor-format-quote
+                        .card-action
+                            a(href='#') Go to recommendation
 
-        .row
-            // TODO: Split into template
-            h4.white-text
-                | Recommendations
+                // TODO: Scrollspy-reveal?
+                .col.s12.m12
+                    .card.blue.darken-1
+                        .card-content.white-text
+                            span.card-title.press-start-font Marcus @ CoderDojo
+                            p
+                                i.mdi-editor-format-quote
+                                span
+                                    i I love Per's drive! He has a great approach to problem solving, finds creative
+                                        | solutions to tackle what the students think is hard to grasp, and is positive and fun
+                                        | to be with
+                                span.mdi-editor-format-quote
+                        .card-action
+                            a(href='#') Go to recommendation
 
-            canvas#pie-chart.pie-chart
-
-            p.flow-text.pink-text.rec
-                b 40%
-                span Driven
-            p.flow-text.cyan-text.rec
-                b 33%
-                span Hard-working
-            p.flow-text.lime-text.rec
-                b 27%
-                span Creative
-
-        br
-
-        .row
-            .col.s12.m12
-                .card.blue.darken-1
-                    .card-content.white-text
-                        span.card-title.press-start-font Hannah @TicTail
-                        p
-                            i.mdi-editor-format-quote
-                            span
-                                i Per is one of the most driven, hard-working and sharp person I have worked with
-                            span.mdi-editor-format-quote
-                    .card-action
-                        a(href='#') Go to recommendation
-
-            // TODO: Scrollspy-reveal?
-            .col.s12.m12
-                .card.blue.darken-1
-                    .card-content.white-text
-                        span.card-title.press-start-font Marcus @ CoderDojo
-                        p
-                            i.mdi-editor-format-quote
-                            span
-                                i I love Per's drive! He has a great approach to problem solving, finds creative
-                                    | solutions to tackle what the students think is hard to grasp, and is positive and fun
-                                    | to be with
-                            span.mdi-editor-format-quote
-                    .card-action
-                        a(href='#') Go to recommendation
-
-            .col.s12.m12
-                .card.blue.darken-1
-                    .card-content.white-text
-                        span.card-title.press-start-font Ayse @ Invisible Monsters
-                        p
-                            i.mdi-editor-format-quote
-                            span
-                                i He has amazing skills to build  new projects. His artistic nature combines
-                                    | with his other qualifications in a greater degree. He creates wonders on many media.
-                                    | Also his personality rocks!
-                            span.mdi-editor-format-quote
-                    .card-action
-                        a(href='#') Go to recommendation
+                .col.s12.m12
+                    .card.blue.darken-1
+                        .card-content.white-text
+                            span.card-title.press-start-font Ayse @ Invisible Monsters
+                            p
+                                i.mdi-editor-format-quote
+                                span
+                                    i He has amazing skills to build  new projects. His artistic nature combines
+                                        | with his other qualifications in a greater degree. He creates wonders on many media.
+                                        | Also his personality rocks!
+                                span.mdi-editor-format-quote
+                        .card-action
+                            a(href='#') Go to recommendation
 

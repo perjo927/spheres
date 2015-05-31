@@ -37,6 +37,14 @@ var options ={
     animateRotate : true
 };
 
+var fireSelector = ".scrollfire" + "." + "social";
+
+/**/
+Template.social.scrollFireContent = function () {
+    Materialize.showStaggeredList(fireSelector);
+    //Materialize.fadeInImage(fireSelector);
+};
+
 /* */
 Template.social.onRendered(function () {
 
@@ -45,10 +53,18 @@ Template.social.onRendered(function () {
     // Get context with jQuery - using jQuery's .get() method.
     var ctx = $("#pie-chart").get(0).getContext("2d");
 
-
-// And for a doughnut chart
+    // And for a doughnut chart
     var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 
+    // Scrollfire
+    var sfOptions = [
+        {
+            selector: fireSelector,
+            offset: 1,
+            callback: "Template.social.scrollFireContent()"
+        }
+    ];
+    Materialize.scrollFire(sfOptions);
 });
 
 /* */

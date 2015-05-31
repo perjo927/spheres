@@ -10,7 +10,8 @@
   line-height: 50%;
 
   &:hover {
-    text-shadow: 0 0 0.2rem rgba(200,200,200, 0.9);
+    text-shadow: 0 0 0.2rem rgba(220,220,220, 0.9);
+    font-weight: bold;
     cursor: pointer;
   }
 }

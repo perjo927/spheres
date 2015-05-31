@@ -6,6 +6,15 @@
   animation: fade-in 1s ease-in;
 }
 
+.contact {
+  line-height: 50%;
+
+  &:hover {
+    text-shadow: 0 0 0.2rem rgba(200,200,200, 0.9);
+    cursor: pointer;
+  }
+}
+
 .pie-chart {
   float: left;
   width: 20rem;
@@ -13,7 +22,6 @@
 }
 
 .social-card {
-  border: 0.1rem inset #222;
   box-shadow: 0 0 4em 0.3em rgba(255,200,30,0.3);
   width: 10rem;
   height: 10rem;

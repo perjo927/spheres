@@ -1,74 +1,36 @@
 template(name="cards")
     // TODO: Split into templates?
-    .container
-        .row
-            h2.center.white-text.press-start-font CV
-        .row
-            ul.scrollfire(class="cards")
-                li
-                    .col.s12.m6
-                        // each cvItems
-                        .card.blue.card-shadow.shimmer
-                            .waves-effect.waves-block.waves-light.cv-card
-                                p.flow-text.press-start-font.center.activator Work experience
-                                h1.center.activator.mdi-action-android
-                            .card-content.white
-                                span.card-title.activator.grey-text.text-darken-4
-                                    | Read more
-                                    i.mdi-navigation-more-vert.right
-                                p
-                                    a(href='#') Source code
-                            .card-reveal
-                                span.card-title.grey-text.text-darken-4
-                                    | Work experience
-                                    i.mdi-navigation-close.right
-                                // TODO: Flyg in? arrow-icons?
-                                ul
-                                    li.flow-text
-                                        | Betsson
-                                    li.flow-text
-                                        | Ericsson
-                li
-                    .col.s12.m6
-                        .card.pink.card-shadow.shimmer
-                            .waves-effect.waves-block.waves-light.cv-card
-                                p.flow-text.press-start-font.center.activator Education
-                                h1.center.activator.mdi-social-school
-                            .card-content.white
-                                span.card-title.activator.grey-text.text-darken-4
-                                    | Read more
-                                    i.mdi-navigation-more-vert.right
-                                p
-                                    a(href='#') Source code
-                            .card-reveal
-                                span.card-title.grey-text.text-darken-4
-                                    | Education
-                                    i.mdi-navigation-close.right
-                                // TODO: Flyg in? arrow-icons?
-                                ul
-                                    li.flow-text
-                                        | LiU
-                                    li.flow-text
-                                        | LiTH
-
-                li
-                    .col.s12.m6
-                        .card.lime.card-shadow.shimmer
-                            .waves-effect.waves-block.waves-light.cv-card
-                                p.flow-text.press-start-font.center.activator Other
-                                h1.center.activator.mdi-social-school
-                            .card-content.white
-                                span.card-title.activator.grey-text.text-darken-4
-                                    | Read more
-                                    i.mdi-navigation-more-vert.right
-                                p
-                                    a(href='#') Source code
-                            .card-reveal
-                                span.card-title.grey-text.text-darken-4
-                                    | Other
-                                    i.mdi-navigation-close.right
-                                ul
-                                    li.flow-text
-                                        | Text 1
-                                    li.flow-text
-                                        | Text 2
+    with content
+        .container
+            .row
+                h2.center.white-text.press-start-font CV
+            .row
+                ul.scrollfire(class="cards")
+                    each cards
+                        li
+                            .col.s12.m6
+                                .card.card-shadow.shimmer(class="#{color}")
+                                    .waves-effect.waves-block.waves-light.cv-card
+                                        p.flow-text.press-start-font.center.activator= title
+                                        h1.center.activator(class="#{icon}")
+                                    .card-content.white
+                                        span.card-title.activator.grey-text.text-darken-4
+                                            | Read more
+                                            i.mdi-navigation-more-vert.right
+                                        with link
+                                            p
+                                                a(href='#{link}' target="_blank")= text
+                                    .card-reveal
+                                        span.card-title.grey-text.text-darken-4
+                                            | #{title}
+                                            i.mdi-navigation-close.right
+                                        hr
+                                        each items
+                                            ul
+                                                li.flow-text
+                                                    p
+                                                        b= title
+                                                        br
+                                                        | #{type}
+                                                        br
+                                                        i= year

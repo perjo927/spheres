@@ -1,7 +1,7 @@
 var textSection = {
     title: "Per",
     subTitle: "The cross-functional web avant-gardist",
-    text: "During the first weeks working for Betsson I was told to choose a value word and thought " +
+    text: "During the first weeks as a Betsson employee I was told to choose a value word and thought " +
         "pretty hard about it. Since I have a tendency to lean towards the borders of change " +
         "'avant-garde' was picked, which signifies my mindset quite well. It is easy to get " +
         "caught up in buzzwords though and I'm working hard on catching up with the past too. " +

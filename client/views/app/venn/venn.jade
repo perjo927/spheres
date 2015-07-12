@@ -1,35 +1,30 @@
 template(name="venn")
     with content
         .container
-            .row
-                h2.white-text.press-start-font Per
-                p.white-text= foo
+            with textSection
+                .row
+                        h2.white-text.press-start-font= title
+                        h5.white-text= subTitle
 
-            .row
-                p.flow-text.white-text
-                    | Avant-garde is my value word. Cross-functional is what I do.
-                    | I work for Betsson and such, with a lot of brands. Trainee I was.
-                    | Mobile front-end full-stack. Buzzwords.
-                    | Trained in Linköping, with a degree.
+                .row
+                    p.flow-text.white-text= text
 
 
-            .row
-                #infographic
-                    #c1.circle.bubble-up
-                        p Experimental and Fun.
-                    #c2.circle.bubble-up
-                        p  Creativity and Innovation.
-                    #c3.circle.bubble-up
-                        p Knowledge and Experience.
-                    #j12.joined
-                        p
-                            | UX pro
-                    #j23.joined
-                        p
-                            | Kernel developer
-                    #j13.joined
-                        p
-                            | Bedroom enthusiast
-                    #all.joined
-                        p
-                            | Per
+            with vennData
+                .row
+                    #infographic.bubble-up
+                        #c1.circle
+                            p= W
+                        #c2.circle
+                            p= E
+                        #c3.circle
+                            p= S
+                        #j12.joined
+                            p= N
+
+                        #j23.joined
+                            p= SE
+                        #j13.joined
+                            p= SW
+                        #all.joined
+                            p= M

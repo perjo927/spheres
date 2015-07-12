@@ -87,6 +87,22 @@ var cards = [
             text: "View on LinkedIn",
             link: "https://www.linkedin.com/in/djpjgj"
         }
+    },
+    {
+        title: "Paper CV (print!)",
+        color: "orange",
+        icon: "mdi-action-print",
+        items: [
+            {
+                title: "How to print",
+                type: "Click on 'Printer Friendly CV'",
+                year: "Coming soon!"
+            }
+        ],
+        link: {
+            text: "Printer friendly CV",
+            link: "#"
+        }
     }
 ];
 

@@ -2,7 +2,7 @@
 var skills = {
     "Languages": [
         {
-            text: "Javascript",
+            text: "JS&TypeScript",
             level: 100
         },
         {
@@ -23,7 +23,11 @@ var skills = {
         },
         {
             text: "CSS",
-            level: 67
+            level: 66
+        },
+        {
+            text: "MongoDB",
+            level: 63
         },
         {
             text: "Java",
@@ -40,10 +44,6 @@ var skills = {
         {
             text: "SQL",
             level: 10
-        },
-        {
-            text: "Erlang",
-            level: 0
         }
     ],
     "Frameworks": [
@@ -64,7 +64,7 @@ var skills = {
             level: 70
         },
         {
-            text: "Can.js",
+            text: "Polymer",
             level: 65
         },
         {
@@ -73,14 +73,14 @@ var skills = {
         },
         {
             text: "Django",
-            level: 55
+            level: 45
         },
         {
             text: "Ruby on rails",
             level: 10
         },
         {
-            text: "Backbone",
+            text: "Aurelia",
             level: 7
         },
         {
@@ -88,7 +88,7 @@ var skills = {
             level: 6
         },
         {
-            text: "Aurelia",
+            text: "Backbone",
             level: 0
         }
     ],
@@ -98,7 +98,7 @@ var skills = {
             level: 99
         },
         {
-            text: "Scrum",
+            text: "Agile",
             level: 90
         },
         {
@@ -106,16 +106,20 @@ var skills = {
             level: 80
         },
         {
-            text: "TDD",
+            text: "Pair programming",
             level: 70
         },
         {
-            text: "Kanban",
+            text: "TDD",
+            level: 67
+        },
+        {
+            text: "CI",
             level: 60
         },
         {
             text: "SOLID",
-            level: 50
+            level: 55
         },
         {
             text: "Lean",
@@ -123,7 +127,57 @@ var skills = {
         },
         {
             text: "FIRST",
-            level: 30
+            level: 37
+        },
+        {
+            text: "BDD",
+            level: 35
+        }
+    ],
+    "Tools":  [
+        {
+            text: "Visual Studio",
+            level: 99
+        },
+        {
+            text: "TFS",
+            level: 90
+        },
+        {
+            text: "JetBrains",
+            level: 80
+        },
+        {
+            text: "Git",
+            level: 75
+        },
+        {
+            text: "Splunk",
+            level: 70
+        },
+        {
+            text: "Jira/YouTrack",
+            level: 65
+        },
+        {
+            text: "Team City",
+            level: 60
+        },
+        {
+            text: "Octopus",
+            level: 58
+        },
+        {
+            text: "Apica",
+            level: 57
+        },
+        {
+            text: "IIS",
+            level: 52
+        },
+        {
+            text: "App Dynamics",
+            level: 40
         }
     ]
 

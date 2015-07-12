@@ -2,57 +2,26 @@ template(name="portfolio")
     with content
         .container
             .row
-                h2.white-text.press-start-font Portfolio
-                .white-text Cross-functional. Diversity.
+                with topSection
+                    h2.white-text.press-start-font= title
+                    p.flow-text.white-text= text
 
             .row
-                .col.s12.m6
-                    .card.medium
-                        .card-image.waves-effect.waves-block.waves-light
-                            img.activator(src='http://materializecss.com/images/office.jpg').scrollfire.portfolio
-                        .card-content
-                            span.card-title.activator.grey-text.text-darken-4
-                                | Paul Wong
-                                i.mdi-navigation-more-vert.right
-                            p
-                                a(href='#') Go to project
-                        .card-reveal
-                            span.card-title.grey-text.text-darken-4
-                                | Paul Wong
-                                i.mdi-navigation-close.right
-                            p
-                                | Here is some more information about this product that is only revealed once clicked on.
-
-                .col.s12.m6
-                    .card.medium
-                        .card-image.waves-effect.waves-block.waves-light
-                            img.activator(src='http://materializecss.com/images/office.jpg').scrollfire.portfolio
-                        .card-content
-                            span.card-title.activator.grey-text.text-darken-4
-                                | Ericsson
-                                i.mdi-navigation-more-vert.right
-                            p
-                                a(href='#') Go to project
-                        .card-reveal
-                            span.card-title.grey-text.text-darken-4
-                                | Ericsson
-                                i.mdi-navigation-close.right
-                            p
-                                | Here is some more information about this product that is only revealed once clicked on.
-
-                .col.s12.m6
-                    .card.medium
-                        .card-image.waves-effect.waves-block.waves-light
-                            img.activator(src='http://materializecss.com/images/office.jpg').scrollfire.portfolio
-                        .card-content
-                            span.card-title.activator.grey-text.text-darken-4
-                                | Ericsson
-                                i.mdi-navigation-more-vert.right
-                            p
-                                a(href='#') Go to project
-                        .card-reveal
-                            span.card-title.grey-text.text-darken-4
-                                | Ericsson
-                                i.mdi-navigation-close.right
-                            p
-                                | Here is some more information about this product that is only revealed once clicked on.
+                each cards
+                    .col.s12.m6
+                        .card.medium
+                            .card-image.waves-effect.waves-block.waves-light
+                                img.activator(src='#{img}').scrollfire.portfolio
+                            .card-content
+                                span.card-title.activator.grey-text.text-darken-4
+                                    | #{title}
+                                    i.mdi-navigation-more-vert.right
+                                with link
+                                    p
+                                        a(href='#{link}' target="_blank")= text
+                            .card-reveal
+                                with item
+                                    span.card-title.grey-text.text-darken-4
+                                        b= title
+                                        i.mdi-navigation-close.right
+                                    p= text

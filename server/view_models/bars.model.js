@@ -68,7 +68,7 @@ var skills = {
             level: 65
         },
         {
-            text: "Knockout",
+            text: "Flask",
             level: 60
         },
         {
@@ -88,14 +88,42 @@ var skills = {
             level: 6
         },
         {
-            text: "Flux",
+            text: "Aurelia",
             level: 0
         }
     ],
     "Methodologies":  [
         {
+            text: "Buzzwords",
+            level: 99
+        },
+        {
+            text: "Scrum",
+            level: 90
+        },
+        {
+            text: "DRY",
+            level: 80
+        },
+        {
+            text: "TDD",
+            level: 70
+        },
+        {
+            text: "Kanban",
+            level: 60
+        },
+        {
             text: "SOLID",
             level: 50
+        },
+        {
+            text: "Lean",
+            level: 40
+        },
+        {
+            text: "FIRST",
+            level: 30
         }
     ]
 

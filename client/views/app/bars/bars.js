@@ -60,7 +60,7 @@ Template[thisViewName].onRendered(function () {
             currentSet = 0;
         }
         Router.go("bars", {_id: newSet})
-    },10* 1000);
+    },7.5* 1000);
 
 });
 

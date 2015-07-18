@@ -48,7 +48,7 @@ var cards = [
             },
             {
                 title: "Linkoping University",
-                type: "Music Producer Programmer (B.Sc.)",
+                type: "Music Producer Programme (B.Sc.)",
                 year: "2005/01 - 2007/12"
             },
             {
@@ -67,6 +67,11 @@ var cards = [
         color: "lime",
         icon: "mdi-action-favorite",
         items: [
+            {
+                title: "Game Management Tool",
+                type: "http://www.betssonab.com/",
+                year: "2014/01 - 2014/06"
+            },
             {
                 title: "CoderDojo Norrkoping",
                 type: "http://coderdojonkpg.se/",
@@ -95,13 +100,13 @@ var cards = [
         items: [
             {
                 title: "How to print",
-                type: "Click on 'Printer Friendly CV'",
-                year: "Coming soon!"
+                type: "Click this tile away and then click on",
+                year: "'Printer Friendly CV'"
             }
         ],
         link: {
             text: "Printer friendly CV",
-            link: "#"
+            link: "pdf/PerJonssonProgrammerCV.pdf"
         }
     }
 ];

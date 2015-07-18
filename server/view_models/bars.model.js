@@ -153,7 +153,7 @@ var skills = {
         },
         {
             text: "Splunk",
-            level: 70
+            level: 71
         },
         {
             text: "Jira/YouTrack",
@@ -161,7 +161,7 @@ var skills = {
         },
         {
             text: "Team City",
-            level: 60
+            level: 61
         },
         {
             text: "Octopus",

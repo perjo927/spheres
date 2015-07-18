@@ -1,8 +1,11 @@
 template(name="spheres")
     with content
         // TODO: add child element to type-text for additional/overflow rows of typing
-        .type-text.white-text.press-start-font.home-title > #{home.title}
-            span.blink.white-text |
+        .white-text.press-start-font.home-title
+            | > Hello, World.
+            .type-text
+                | #{home.title}
+                span.blink.white-text |
 
         .container
             .row

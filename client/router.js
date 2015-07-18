@@ -1,7 +1,22 @@
+var renderDefault = function(router) {
+    router.render('navbar', {
+        to: "navbar",
+        data: function () {
+            return {
+                content: VM.sections["navbar"].service.getContent()
+            }
+        }
+    });
+    router.render('footer', {
+        to: "footer",
+        data: function () {
+            return {
+                content: VM.sections["footer"].service.getContent()
+            }
+        }
+    });
+};
 
-//Router.route('/admin', function () {
-//    this.render('admin');
-//});
 
 //Router.onBeforeAction(function () {
 //    // all properties available in the route function
@@ -22,7 +37,51 @@
 //    // or except: ['routeOne', 'routeTwo']
 //});
 
-// TODO: Controlller for footer and nvabar rendering
+/* */
+Router.route('/admin', {
+        name: "admin",
+        loadingTemplate: "loading",
+        layoutTemplate: "admin",
+        //waitOn: function() {
+        //    return CreateSubscriptions([
+        //        "adminNavbar",
+        //        "adminFooter",
+        //        "adminMain"
+        //    ]);
+        //},
+        action: function(){
+            var router = this;
+            var params = router.params;
+
+            router.render('admin_home', {
+                //data: function () {
+                //    return {
+                //        content: VM.sections["admin"].service.getContent()
+                //    }
+                //}
+            });
+
+            router.render('admin_navbar', {
+                to: "navbar"
+                //data: function () {
+                //    return {
+                //        content: VM.sections["navbar"].service.getContent()
+                //    }
+                //}
+            });
+            router.render('admin_footer', {
+                to: "footer"
+                //data: function () {
+                //    return {
+                //        content: VM.sections["footer"].service.getContent()
+                //    }
+                //}
+            });
+        }
+    }
+);
+
+
 
 /* */
 Router.route('/', {
@@ -48,22 +107,7 @@ Router.route('/', {
                 }
             });
 
-            router.render('navbar', {
-                to: "navbar",
-                data: function () {
-                    return {
-                        content: VM.sections["navbar"].service.getContent()
-                    }
-                }
-            });
-            router.render('footer', {
-                to: "footer",
-                data: function () {
-                    return {
-                        content: VM.sections["footer"].service.getContent()
-                    }
-                }
-            });
+            renderDefault(router);
         }
     }
 );
@@ -84,22 +128,7 @@ Router.route('/bars/:_id', {
             var router = this;
             var params = router.params;
 
-            router.render('navbar', {
-                to: "navbar",
-                data: function () {
-                    return {
-                        content: VM.sections["navbar"].service.getContent()
-                    }
-                }
-            });
-            router.render('footer', {
-                to: "footer",
-                data: function () {
-                    return {
-                        content: VM.sections["footer"].service.getContent()
-                    }
-                }
-            });
+            renderDefault(router);
 
             router.render('bars', {
                 data: function () {
@@ -132,22 +161,7 @@ Router.route('/venn/', {
         action: function(){
             var router = this;
 
-            router.render('navbar', {
-                to: "navbar",
-                data: function () {
-                    return {
-                        content: VM.sections["navbar"].service.getContent()
-                    }
-                }
-            });
-            router.render('footer', {
-                to: "footer",
-                data: function () {
-                    return {
-                        content: VM.sections["footer"].service.getContent()
-                    }
-                }
-            });
+            renderDefault(router);
 
             router.render('venn', {
                 data: function () {
@@ -176,22 +190,7 @@ Router.route('/cards/', {
         action: function(){
             var router = this;
 
-            router.render('navbar', {
-                to: "navbar",
-                data: function () {
-                    return {
-                        content: VM.sections["navbar"].service.getContent()
-                    }
-                }
-            });
-            router.render('footer', {
-                to: "footer",
-                data: function () {
-                    return {
-                        content: VM.sections["footer"].service.getContent()
-                    }
-                }
-            });
+            renderDefault(router);
 
             router.render('cards', {
                 data: function () {
@@ -220,22 +219,7 @@ Router.route('/social/', {
         action: function(){
             var router = this;
 
-            router.render('navbar', {
-                to: "navbar",
-                data: function () {
-                    return {
-                        content: VM.sections["navbar"].service.getContent()
-                    }
-                }
-            });
-            router.render('footer', {
-                to: "footer",
-                data: function () {
-                    return {
-                        content: VM.sections["footer"].service.getContent()
-                    }
-                }
-            });
+            renderDefault(router);
 
             router.render('social', {
                 data: function () {
@@ -264,22 +248,7 @@ Router.route('/portfolio/', {
         action: function(){
             var router = this;
 
-            router.render('navbar', {
-                to: "navbar",
-                data: function () {
-                    return {
-                        content: VM.sections["navbar"].service.getContent()
-                    }
-                }
-            });
-            router.render('footer', {
-                to: "footer",
-                data: function () {
-                    return {
-                        content: VM.sections["footer"].service.getContent()
-                    }
-                }
-            });
+            renderDefault(router);
 
             router.render('portfolio', {
                 data: function () {

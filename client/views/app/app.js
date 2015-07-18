@@ -11,8 +11,3 @@ Template.app.helpers({
     }
 });
 
-
-Template.app.events({
-    'click button': function () {
-    }
-});

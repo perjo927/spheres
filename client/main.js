@@ -1,4 +1,6 @@
 Session.setDefault("environment", "development");
+Session.setDefault("adminPreviewRoute", "home");
+
 
 (function setEnvironment() {
     Meteor.apply("processEnv", ["NODE_ENV"], function(err,res) {

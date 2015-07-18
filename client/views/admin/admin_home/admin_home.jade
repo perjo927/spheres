@@ -1,0 +1,16 @@
+//
+template(name="admin_home")
+    h4 Content areas
+    .input-field.col.s6
+        select(class="browser-default")
+            option(value='', disabled='', selected='') Choose your option
+            each contentAreas
+                option(value="{{this}}")= this
+
+    hr
+    +preview
+
+template(name="preview")
+    .row
+        //| {{url}}
+        //iframe(src="www.google.se" width="100%" height="400")

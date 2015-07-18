@@ -1,9 +1,24 @@
+var setMailUrl = function (isDev) {
+    // TODO: Get a production email account (Meteor limits 200 in default production)
+    if (!isDev) {
+        return;
+    }
+    var emailAccount = ParseAssets("emailAccount");
 
-Meteor.startup(function () {
-    // code to run on server at startup
+    process.env.MAIL_URL=
+        "smtp://" +
+        emailAccount.username +
+        ":" +
+        emailAccount. password +
+        "@" +
+        emailAccount.mailserver +
+        ":" +
+        emailAccount.port
+        +"/";
+};
 
-    var assets = JSON.parse(Assets.getText('private.json'));
-    var admin = assets.admin;
+var createAdminUser = function () {
+    var admin = ParseAssets("admin");
 
     try {
         Accounts.createUser({
@@ -14,7 +29,17 @@ Meteor.startup(function () {
     } catch (err) {
         //console.log(err);
     }
+};
 
-    var isDev = (process.env["NODE_ENV"] === "development");
+var enableConsoleMe = function (isDev) {
     ConsoleMe.enabled = (isDev); // Enable server logs in browser in dev env
+};
+
+//
+Meteor.startup(function () {
+    var isDev = (process.env["NODE_ENV"] === "development");
+
+    enableConsoleMe(isDev);
+    createAdminUser();
+    setMailUrl(isDev);
 });

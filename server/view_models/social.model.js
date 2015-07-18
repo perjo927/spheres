@@ -23,7 +23,15 @@ var socialCards = [
 
 var contact = {
     phone: "(+SE) 76 180 55 94",
-    mail: "per.jonsson@b***.com"
+    mail: "per.jonsson@b***.com",
+    modal: {
+        color: "black",
+        title: "Contact Per",
+        image: "img/p.jpg",
+        alt: "Per Jonsson",
+        text: "Per currently lives in the Stockholm, Sweden. Please fill in all fields below in order to contact him.",
+        icon: "mdi-content-send"
+    }
 };
 
 var recommendations = [

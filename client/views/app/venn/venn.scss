@@ -14,7 +14,7 @@ $lime_55: rgba(205,220,57,.55);
     color: $white;
 
 }
-.circle {
+.v-circle {
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 50%;
     width: 25em;

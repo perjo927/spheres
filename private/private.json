@@ -1,4 +1,11 @@
 {
+  "emailTo": "djpjgj@gmail.com",
+  "emailAccount": {
+    "username": "perjo927@gmail.com",
+    "password": "actionjournal",
+    "mailserver": "smtp.gmail.com",
+    "port": 465
+  },
   "admin": {
     "username": "admin",
     "email": "a@a.com",

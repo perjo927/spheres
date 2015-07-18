@@ -25,10 +25,12 @@ template(name="social")
                             // TODO: Open app?
                             span.white-text= phone
                     .col.s12.m6
-                        p.flow-text.contact
+                        p.flow-text.contact.modal-trigger(href="#contact_modal")
                             // TODO: Meter Email.send
                             i.mdi-content-mail.green-text
                             span.white-text= mail
+                    with modal
+                        +contact_modal
 
             .row
                 // Empty space

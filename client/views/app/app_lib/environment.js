@@ -2,8 +2,8 @@ App = {};
 
 App.parseForm = function(event) {
     var formContainer = {};
-
     var form = $(event.target).serializeArray();
+
     form.forEach(function (element, index, array) {
         formContainer[element.name] = element.value;
     });
@@ -49,4 +49,10 @@ App.validateForm = function (formFields, formContainer, callback) {
     });
 
     callback(isValid, errorMessage);
+};
+
+App.helpers = {};
+
+App.helpers.isPreview = function () {
+    return Session.get("isPreview");
 };

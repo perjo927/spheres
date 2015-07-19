@@ -1,18 +1,50 @@
 template(name="navbar")
-    with content
-        .container
-            .nav-wrapper.black
-                a.button-collapse(href="#" data-activates="mobile-nav")
-                    i.mdi-navigation-menu
-                ul.left.hide-on-med-and-down.press-start-font
-                    each navItems
-                        +nav
-                ul#mobile-nav.side-nav.black.press-start-font
-                    each navItems
-                        +nav
+    if isPreview
+        with content
+            .container
+                .row
+                    ul
+                        each navItems
+                            +nav_preview
+
+    else
+        with content
+            .container
+                .nav-wrapper.black
+                    a.button-collapse(href="#" data-activates="mobile-nav")
+                        i.mdi-navigation-menu
+                    ul.left.hide-on-med-and-down.press-start-font
+                        each navItems
+                            +nav
+                    ul#mobile-nav.side-nav.black.press-start-font
+                        each navItems
+                            +nav
 
 //
 template(name="nav")
         li
-            a.nav-text(href="#{link}" class="#{color}-text")= text
+            a.nav-text(href="/#{link}" id="#{link}" class="#{color}-text")= text
+
+//
+template(name="nav_preview")
+    li
+        .row
+            a.press-start-font.nav-text(id="#{link}" class="#{color}-text")= text
+            form#edit_navbar.col.s12
+                .row
+                    .input-field.col.s6.m4.white-text
+                        input.input-text.validate(type='text' id="input-{{text}}" name="text" class="validate"
+                        data="{{text}}" pattern=".{3,}" required title="3 characters minimum"
+                        placeholder="          {{text}}")
+                        label(for='input-{{text}}') Text
+
+                    .input-field.col.s6.m4.white-text
+                        input.input-text.validate(type='text' id="input-{{color}}" name="color" class="validate"
+                        data="{{color}}" pattern=".{3,}"
+                        placeholder="          {{color}}")
+                        label(for='input-{{color}}' data-error="wrong" data-success="right") Color
+
+                    button.btn.waves-effect.waves-light(type='submit', name='action')
+                        | Change
+
 

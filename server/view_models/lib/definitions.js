@@ -3,32 +3,32 @@ ViewModel = {};
 ViewModel.navItems = [
     {
         text: "Home",
-        link: "/",
+        link: "home",
         color: "light-green"
     },
     {
         text: "Per",
-        link: "/venn",
+        link: "venn",
         color: "yellow"
     },
     {
         text: "Skills",
-        link: "/bars/Languages",
+        link: "bars",
         color: "cyan"
     },
     {
         text: "CV",
-        link: "/cards",
+        link: "cards",
         color: "orange"
     },
     {
         text: "Social",
-        link: "/social",
+        link: "social",
         color: "lime"
     },
     {
         text: "Portfolio",
-        link: "/portfolio",
+        link: "portfolio",
         color: "pink"
     }
 ];

@@ -1,4 +1,6 @@
 var renderDefault = function(router) {
+    Session.set("isPreview", false);
+
     router.render('navbar', {
         to: "navbar",
         data: function () {
@@ -38,51 +40,59 @@ var renderDefault = function(router) {
 //});
 
 /* */
-Router.route('/admin', {
+Router.route('/admin/:_id', {
         name: "admin",
         loadingTemplate: "loading",
         layoutTemplate: "admin",
-        //waitOn: function() {
-        //    return CreateSubscriptions([
-        //        "adminNavbar",
-        //        "adminFooter",
-        //        "adminMain"
-        //    ]);
-        //},
+        waitOn: function() {
+            return CreateSubscriptions(ContentAreas); // + admin collections ? TODO
+        },
         action: function(){
             var router = this;
             var params = router.params;
+            var contentArea = params._id;
+            var getCollectionId = VM.sections[contentArea].service.getCollectionId();
+            var getContent = VM.sections[contentArea].service.getContent();
+
+            Session.set("previewCollectionId", getCollectionId());
+            Session.set("isPreview", true);
+            Session.set("previewContent", getContent());
 
             router.render('admin_home', {
-                //data: function () {
-                //    return {
-                //        content: VM.sections["admin"].service.getContent()
-                //    }
-                //}
+                data: function () {
+                    return {
+                        content: getContent
+                    }
+                }
             });
 
             router.render('admin_navbar', {
-                to: "navbar"
+                to: "admin_navbar"
                 //data: function () {
                 //    return {
-                //        content: VM.sections["navbar"].service.getContent()
+                //        content: VM.sections["adminNavbar"].service.getContent()
                 //    }
                 //}
             });
-            router.render('admin_footer', {
-                to: "footer"
-                //data: function () {
-                //    return {
-                //        content: VM.sections["footer"].service.getContent()
-                //    }
-                //}
+
+            router.render(params._id, {
+                to: "admin_preview",
+                data: function () {
+                    return {
+                        content: VM.sections[params._id].service.getContent()
+                    }
+                }
             });
+
         }
     }
 );
 
+Router.route('/admin/', function () {
+    Router.go('/admin/spheres');
+});
 
-
+// TODO: routeName
 /* */
 Router.route('/', {
         name: "home",
@@ -112,7 +122,24 @@ Router.route('/', {
     }
 );
 
-//
+Router.route('/home/', function () {
+    Router.go('home');
+});
+Router.route('/footer/', function () {
+    Router.go('home');
+});
+Router.route('/navbar/', function () {
+    Router.go('home');
+});
+Router.route('/spheres/', function () {
+    Router.go('home');
+});
+
+
+Router.route('/bars/', function () {
+    Router.go('/bars/Languages');
+});
+
 Router.route('/bars/:_id', {
         name: "bars",
         loadingTemplate: "loading",
@@ -147,7 +174,7 @@ Router.route('/bars/:_id', {
 );
 
 //
-Router.route('/venn/', {
+Router.route('/venn', {
         name: "venn",
         loadingTemplate: "loading",
         layoutTemplate: "app",
@@ -176,7 +203,7 @@ Router.route('/venn/', {
 );
 
 //
-Router.route('/cards/', {
+Router.route('/cards', {
         name: "cards",
         loadingTemplate: "loading",
         layoutTemplate: "app",
@@ -205,7 +232,7 @@ Router.route('/cards/', {
 );
 
 //
-Router.route('/social/', {
+Router.route('/social', {
         name: "social",
         loadingTemplate: "loading",
         layoutTemplate: "app",
@@ -234,7 +261,7 @@ Router.route('/social/', {
 );
 
 //
-Router.route('/portfolio/', {
+Router.route('/portfolio', {
         name: "portfolio",
         loadingTemplate: "loading",
         layoutTemplate: "app",

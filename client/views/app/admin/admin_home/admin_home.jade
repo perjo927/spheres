@@ -1,0 +1,10 @@
+//
+template(name="admin_home")
+    .container
+        .row
+            h4.col.s12.m6.l6.white-text Content areas
+            .input-field.col.s12.m4.l4
+                select(class="browser-default")
+                    option(value='', disabled='', selected='') Choose your option
+                    each contentAreas
+                        option(value="{{this}}")= this

@@ -1,5 +1,9 @@
 Session.setDefault("environment", "development");
 Session.setDefault("adminPreviewRoute", "home");
+Session.setDefault("isPreview", false);
+Session.setDefault("previewCollectionId", undefined);
+Session.set("previewContent", {});
+
 
 
 (function setEnvironment() {
@@ -13,5 +17,5 @@ Session.setDefault("adminPreviewRoute", "home");
 
 
 UI.body.rendered = function() {
-    Session.setDefault("windowHeight", window.height);
+
 };

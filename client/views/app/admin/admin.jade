@@ -1,0 +1,16 @@
+//
+template(name="admin")
+    header
+        nav
+           +yield "admin_navbar"
+    main
+        +yield
+        hr
+        +yield "admin_preview"
+    footer
+        hr
+        //+preview
+
+//template(name="preview")
+//    .row
+//        iframe#preview(src="{{url}}" width="100%" height="400")

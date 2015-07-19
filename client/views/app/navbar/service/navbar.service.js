@@ -1,5 +1,10 @@
-VM.sections.navbar.service = {
+var section = "navbar";
+
+VM.sections[section].service = {
     "getContent": function() {
-        return VM.FindContentItems("navbar");
+        return VM.FindContentItems(section);
+    },
+    "getCollectionId": function() {
+        return VM.GetCollectionId(section);
     }
 };

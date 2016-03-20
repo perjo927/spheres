@@ -1,6 +1,6 @@
-@import "client\style\colors.scss";
-@import "client\style\urls.scss";
-@import "client\style\keyframes.scss";
+@import "{}/client/style/_colors";
+@import "{}/client/style/_urls";
+@import "{}/client/style/_keyframes";
 @import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body {

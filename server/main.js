@@ -42,4 +42,7 @@ Meteor.startup(function () {
     enableConsoleMe(isDev);
     createAdminUser();
     setMailUrl(isDev);
+    //Accounts.config({
+    //    forbidClientAccountCreation: true
+    //});
 });
